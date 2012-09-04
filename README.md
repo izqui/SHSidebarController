@@ -16,6 +16,6 @@ LICENSE
 --------
 It has no license. You can use the code however you want and edit whatever you want.
 
-If you use it in your project, mention me on twitter (@izqui9). I'd love to use what you use it for.
+If you use it in your project, mention me on twitter (@izqui9). I'd love to see  what you use it for.
 
 Forks and pull requests are welcome.
