@@ -7,9 +7,9 @@ It uses UIView-Origami by XYstudio and is inspired by NSSidebarController by Nac
 
 It's really simple to use:
 
--Import files from `SHSidebarController` to your project.
--Add `QuartzCore.framework`
--Have fun with `SHSidebarController`
+- Import files from `SHSidebarController` to your project.
+- Add `QuartzCore.framework`
+- Have fun with `SHSidebarController`
 
 LICENSE
 --------
