@@ -1,3 +1,4 @@
+<img src="http://media.tumblr.com/tumblr_m9tssyiJJj1rtz44b.png"/>
 Showy Sidebar Controller
 ====================
 
