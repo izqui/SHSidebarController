@@ -34,11 +34,11 @@
         
         self.mainVC = [[UIViewController alloc] init];
         self.menuVC = [[SHMenuTVC alloc] initWithTitlesArray:tA andDelegate:self];
-        self.menuVC.view.frame = CGRectMake(0, 0, 161.5, 480);
+        
         self.swipeR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(open)];
         [self.swipeR setDirection:UISwipeGestureRecognizerDirectionRight];
         [self.view addGestureRecognizer:self.swipeR];
-        [self.menuVC.view setFrame:CGRectMake(0, 20, 120, 460)];
+        
         
         tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close)];
         swipeL = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(close)];
@@ -118,7 +118,7 @@
     [self.mainVC.view removeFromSuperview];
     self.mainVC = main;
     
-    self.mainVC.view.frame = CGRectMake(0, 0, 320, 460);
+    self.mainVC.view.frame = CGRectMake(0, 0, 320, self.menuVC.view.frame.size.height);
     UINavigationController *n = (UINavigationController *)self.mainVC;
     UIViewController *v = [n.viewControllers objectAtIndex:0];
     
@@ -145,7 +145,7 @@
     
     if (menuOpened){
         
-        [self.mainVC.view hideOrigamiTransitionWith:self.menuVC.view NumberOfFolds:1 Duration:.4 Direction:XYOrigamiDirectionFromLeft completion:^(BOOL finished) {
+        [self.mainVC.view hideOrigamiTransitionWith:self.menuVC.view NumberOfFolds:1 Duration:.2 Direction:XYOrigamiDirectionFromLeft completion:^(BOOL finished) {
             
             menuOpened = !menuOpened;
             [self.mainVC.view removeGestureRecognizer:tap];
@@ -157,9 +157,9 @@
     
     if (!menuOpened){
         
-        self.menuVC.view.frame = CGRectMake(0, 0, 161.5, 460);
+        self.menuVC.view.frame = CGRectMake(0, 0, 161.5, self.menuVC.view.frame.size.height);
         
-        [self.mainVC.view showOrigamiTransitionWith:self.menuVC.view NumberOfFolds:1 Duration:.4 Direction:XYOrigamiDirectionFromLeft completion:^(BOOL finished) {
+        [self.mainVC.view showOrigamiTransitionWith:self.menuVC.view NumberOfFolds:1 Duration:.2 Direction:XYOrigamiDirectionFromLeft completion:^(BOOL finished) {
             
             menuOpened = !menuOpened;
             [self.mainVC.view addGestureRecognizer:tap];
