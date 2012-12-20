@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/izqui/SHSidebarController"
   s.license      = 'None'
   s.author       = { "Jorge Izquierdo" => "izqui97@gmail.com" }
-  s.source       = { :git => "https://github.com/JAManfredi/SHSidebarController.git", :commit => "0.0.1" } }
+  s.source       = { :git => "https://github.com/JAManfredi/SHSidebarController.git", :commit => "4241c25f4153c00d2f620e194ede80b85146f836" }
   s.platform     = :ios, '5.0'
   s.source_files = 'SHSidebarController', 'SHSidebarController/*.{h,m}'
   s.resources = "SHSidebarController/*.png"
