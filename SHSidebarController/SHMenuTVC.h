@@ -8,19 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-
-@protocol SHMenuDelegate;
-@interface SHMenuTVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
-{
-    id <SHMenuDelegate> delegate;
-    NSArray *titlesArray;
-}
--(id)initWithTitlesArray:(NSArray *)array andDelegate:(id<SHMenuDelegate>)del;
-@property (nonatomic, strong) UITableView *tableView;
-
-@end
 @protocol SHMenuDelegate <NSObject>
 @optional
-
 -(void)didSelectElementAtIndex:(NSInteger)index;
+@end
+
+@protocol SHMenuDelegate;
+@interface SHMenuTVC : UIViewController <UITableViewDataSource,
+UITableViewDelegate>
+{
+    UIImageView *_sbg;
+    UIImageView *_shadow;
+    CGRect      _screenBounds;
+    NSArray     *_titlesArray;
+    UIView      *_cellSelectedBackgroundView;
+}
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (weak, nonatomic) id<SHMenuDelegate> delegate;
+
+- (void)setTableViewWidth:(NSInteger)width;
+- (void)setCellSelectionColor:(UIColor *)color;
+- (id)initWithTitlesArray:(NSArray *)array andDelegate:(id<SHMenuDelegate>)del;
+
 @end
