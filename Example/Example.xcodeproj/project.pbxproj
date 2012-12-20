@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E54EA5716838534002C4F5F /* lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E54EA4F16838533002C4F5F /* lines.png */; };
+		4E54EA5816838534002C4F5F /* lines@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E54EA5016838533002C4F5F /* lines@2x.png */; };
+		4E54EA5916838534002C4F5F /* sidebarbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E54EA5116838533002C4F5F /* sidebarbg.png */; };
+		4E54EA5A16838534002C4F5F /* sidebarbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E54EA5216838533002C4F5F /* sidebarbg@2x.png */; };
+		4E54EA5B16838534002C4F5F /* sidebarcell.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E54EA5316838533002C4F5F /* sidebarcell.png */; };
+		4E54EA5C16838534002C4F5F /* sidebarcell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E54EA5416838534002C4F5F /* sidebarcell@2x.png */; };
+		4E54EA5D16838534002C4F5F /* sidebarshadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E54EA5516838534002C4F5F /* sidebarshadow.png */; };
+		4E54EA5E16838534002C4F5F /* sidebarshadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E54EA5616838534002C4F5F /* sidebarshadow@2x.png */; };
 		DA337C0015F620F90064605E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA337BFF15F620F90064605E /* UIKit.framework */; };
 		DA337C0215F620F90064605E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA337C0115F620F90064605E /* Foundation.framework */; };
 		DA337C0415F620F90064605E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA337C0315F620F90064605E /* CoreGraphics.framework */; };
@@ -15,17 +23,21 @@
 		DA337C1015F620F90064605E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA337C0F15F620F90064605E /* AppDelegate.m */; };
 		DA337C1F15F621460064605E /* BlueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA337C1E15F621460064605E /* BlueVC.m */; };
 		DA337C2215F6214F0064605E /* RedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA337C2115F6214F0064605E /* RedVC.m */; };
-		DA337C3A15F621D60064605E /* lines@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA337C3215F621D60064605E /* lines@2x.png */; };
 		DA337C3B15F621D60064605E /* SHMenuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA337C3415F621D60064605E /* SHMenuTVC.m */; };
 		DA337C3C15F621D60064605E /* SHSidebarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA337C3615F621D60064605E /* SHSidebarController.m */; };
-		DA337C3D15F621D60064605E /* sidebarbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA337C3715F621D60064605E /* sidebarbg@2x.png */; };
 		DA337C3E15F621D60064605E /* UIView+Origami.m in Sources */ = {isa = PBXBuildFile; fileRef = DA337C3915F621D60064605E /* UIView+Origami.m */; };
-		DA337C4115F622A70064605E /* sidebarcell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA337C3F15F622A60064605E /* sidebarcell@2x.png */; };
-		DA337C4215F622A70064605E /* sidebarshadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA337C4015F622A70064605E /* sidebarshadow@2x.png */; };
 		DA337C4415F623FA0064605E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA337C4315F623FA0064605E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E54EA4F16838533002C4F5F /* lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lines.png; sourceTree = "<group>"; };
+		4E54EA5016838533002C4F5F /* lines@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lines@2x.png"; sourceTree = "<group>"; };
+		4E54EA5116838533002C4F5F /* sidebarbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidebarbg.png; sourceTree = "<group>"; };
+		4E54EA5216838533002C4F5F /* sidebarbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebarbg@2x.png"; sourceTree = "<group>"; };
+		4E54EA5316838533002C4F5F /* sidebarcell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidebarcell.png; sourceTree = "<group>"; };
+		4E54EA5416838534002C4F5F /* sidebarcell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebarcell@2x.png"; sourceTree = "<group>"; };
+		4E54EA5516838534002C4F5F /* sidebarshadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidebarshadow.png; sourceTree = "<group>"; };
+		4E54EA5616838534002C4F5F /* sidebarshadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebarshadow@2x.png"; sourceTree = "<group>"; };
 		DA337BFB15F620F90064605E /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA337BFF15F620F90064605E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA337C0115F620F90064605E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,16 +52,12 @@
 		DA337C1E15F621460064605E /* BlueVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueVC.m; sourceTree = "<group>"; };
 		DA337C2015F6214F0064605E /* RedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedVC.h; sourceTree = "<group>"; };
 		DA337C2115F6214F0064605E /* RedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedVC.m; sourceTree = "<group>"; };
-		DA337C3215F621D60064605E /* lines@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lines@2x.png"; sourceTree = "<group>"; };
 		DA337C3315F621D60064605E /* SHMenuTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMenuTVC.h; sourceTree = "<group>"; };
 		DA337C3415F621D60064605E /* SHMenuTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMenuTVC.m; sourceTree = "<group>"; };
 		DA337C3515F621D60064605E /* SHSidebarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSidebarController.h; sourceTree = "<group>"; };
 		DA337C3615F621D60064605E /* SHSidebarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSidebarController.m; sourceTree = "<group>"; };
-		DA337C3715F621D60064605E /* sidebarbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebarbg@2x.png"; sourceTree = "<group>"; };
 		DA337C3815F621D60064605E /* UIView+Origami.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Origami.h"; sourceTree = "<group>"; };
 		DA337C3915F621D60064605E /* UIView+Origami.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Origami.m"; sourceTree = "<group>"; };
-		DA337C3F15F622A60064605E /* sidebarcell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebarcell@2x.png"; sourceTree = "<group>"; };
-		DA337C4015F622A70064605E /* sidebarshadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebarshadow@2x.png"; sourceTree = "<group>"; };
 		DA337C4315F623FA0064605E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -71,7 +79,6 @@
 		DA337BF015F620F90064605E = {
 			isa = PBXGroup;
 			children = (
-				DA337C4315F623FA0064605E /* QuartzCore.framework */,
 				DA337C0515F620F90064605E /* Example */,
 				DA337BFE15F620F90064605E /* Frameworks */,
 				DA337BFC15F620F90064605E /* Products */,
@@ -89,6 +96,7 @@
 		DA337BFE15F620F90064605E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA337C4315F623FA0064605E /* QuartzCore.framework */,
 				DA337BFF15F620F90064605E /* UIKit.framework */,
 				DA337C0115F620F90064605E /* Foundation.framework */,
 				DA337C0315F620F90064605E /* CoreGraphics.framework */,
@@ -125,14 +133,18 @@
 		DA337C3115F621D60064605E /* SHSidebarController */ = {
 			isa = PBXGroup;
 			children = (
-				DA337C3215F621D60064605E /* lines@2x.png */,
-				DA337C3F15F622A60064605E /* sidebarcell@2x.png */,
-				DA337C4015F622A70064605E /* sidebarshadow@2x.png */,
+				4E54EA4F16838533002C4F5F /* lines.png */,
+				4E54EA5016838533002C4F5F /* lines@2x.png */,
+				4E54EA5116838533002C4F5F /* sidebarbg.png */,
+				4E54EA5216838533002C4F5F /* sidebarbg@2x.png */,
+				4E54EA5316838533002C4F5F /* sidebarcell.png */,
+				4E54EA5416838534002C4F5F /* sidebarcell@2x.png */,
+				4E54EA5516838534002C4F5F /* sidebarshadow.png */,
+				4E54EA5616838534002C4F5F /* sidebarshadow@2x.png */,
 				DA337C3315F621D60064605E /* SHMenuTVC.h */,
 				DA337C3415F621D60064605E /* SHMenuTVC.m */,
 				DA337C3515F621D60064605E /* SHSidebarController.h */,
 				DA337C3615F621D60064605E /* SHSidebarController.m */,
-				DA337C3715F621D60064605E /* sidebarbg@2x.png */,
 				DA337C3815F621D60064605E /* UIView+Origami.h */,
 				DA337C3915F621D60064605E /* UIView+Origami.m */,
 			);
@@ -192,10 +204,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA337C0A15F620F90064605E /* InfoPlist.strings in Resources */,
-				DA337C3A15F621D60064605E /* lines@2x.png in Resources */,
-				DA337C3D15F621D60064605E /* sidebarbg@2x.png in Resources */,
-				DA337C4115F622A70064605E /* sidebarcell@2x.png in Resources */,
-				DA337C4215F622A70064605E /* sidebarshadow@2x.png in Resources */,
+				4E54EA5716838534002C4F5F /* lines.png in Resources */,
+				4E54EA5816838534002C4F5F /* lines@2x.png in Resources */,
+				4E54EA5916838534002C4F5F /* sidebarbg.png in Resources */,
+				4E54EA5A16838534002C4F5F /* sidebarbg@2x.png in Resources */,
+				4E54EA5B16838534002C4F5F /* sidebarcell.png in Resources */,
+				4E54EA5C16838534002C4F5F /* sidebarcell@2x.png in Resources */,
+				4E54EA5D16838534002C4F5F /* sidebarshadow.png in Resources */,
+				4E54EA5E16838534002C4F5F /* sidebarshadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +301,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
 				INFOPLIST_FILE = "Example/Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -296,7 +314,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
 				INFOPLIST_FILE = "Example/Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

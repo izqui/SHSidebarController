@@ -6,31 +6,39 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "SHMenuTVC.h"
-
-
+#import <UIKit/UIKit.h>
 
 @interface SHSidebarController : UIViewController <SHMenuDelegate>
 {
-    
-    BOOL menuOpened;
-    UITapGestureRecognizer *tap;
-    UISwipeGestureRecognizer *swipeL, *swipeR;
-    UIView *behindV;
-    
-    NSInteger current;
+    BOOL                    _useOrigami;
+    BOOL                    _menuOpened;
+    UIView                  *behindV;
+    CGRect                  _screenBounds;
+    NSInteger               _current;
+    NSInteger               _slideDistance;
+    UITapGestureRecognizer  *_tap;
 }
-@property (nonatomic, strong) UIViewController *mainVC, *menuVC;
+
+@property (nonatomic, strong) SHMenuTVC *menuVC;
 @property (nonatomic, strong) NSArray *viewsArray;
+@property (nonatomic, strong) UIViewController *mainVC;
 @property (nonatomic, strong) NSManagedObjectContext *context;
-@property (nonatomic, strong)  UISwipeGestureRecognizer *swipeR;
 
--(id)initWithArrayOfVC:(NSArray *)array;
+@property (nonatomic, strong) UISwipeGestureRecognizer *swipeR;
+@property (nonatomic, strong) UISwipeGestureRecognizer *swipeL;
 
--(void)menuChange;
--(void)closeAndChange:(UIViewController *)vc;
--(void)changeMain:(UIViewController *)main;
--(void)goToView:(NSInteger)index;
--(void)closeAndPop;
+- (id)initWithArrayOfVC:(NSArray *)array;
+
+- (void)menuChange;
+- (void)goToView:(NSInteger)index;
+- (void)changeMain:(UIViewController *)main;
+
+- (void)closeAndPop;
+- (void)closeAndChange:(UIViewController *)vc;
+
+- (void)useOrigami:(BOOL)orgigami;
+- (void)setSidebarSelectionColor:(UIColor *)color;
+- (void)setSideBarSlideDistance:(NSInteger)distance;
+
 @end

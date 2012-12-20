@@ -9,144 +9,111 @@
 #import "SHMenuTVC.h"
 #import <QuartzCore/QuartzCore.h>
 
-
 @implementation SHMenuTVC
-@synthesize tableView;
--(id)initWithTitlesArray:(NSArray *)array andDelegate:(id<SHMenuDelegate>)del{
-    
+
+#pragma mark - Initialization
+
+- (id)initWithTitlesArray:(NSArray *)array andDelegate:(id<SHMenuDelegate>)del
+{
     self = [super init];
-    
-    if (self){
+    if (self) {
+        _delegate = del;
+        _titlesArray = array;
+        _screenBounds = [[UIScreen mainScreen] bounds];
         
-        delegate = del;
-        titlesArray = array;
-        self.view.frame = CGRectMake(0, 0, 161.5, 480);
+        self.view.frame = CGRectMake(0, 0, 161.5, _screenBounds.size.height);
     }
     return self;
 }
+
+#pragma mark - View Did Load
+
 - (void)viewDidLoad
 {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 162, 480) style:UITableViewStylePlain];
+    [super viewDidLoad];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,
+                                                                   0,
+                                                                   162,
+                                                                   _screenBounds.size.height) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     
-    UIImageView *shadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sidebarshadow"]];
-    [shadow setFrame:CGRectMake(118, 0, 43.5, 480)];
-    [self.view addSubview:shadow];
-    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    UIImageView *sbg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sidebarbg"]];
-    [sbg setFrame:CGRectMake(0, 0, 161.5, 480)];
-    [self.tableView setBackgroundView:sbg];
-    self.view.backgroundColor = [UIColor clearColor];
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)viewDidUnload
-{
+    _shadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sidebarshadow"]];
+    [_shadow setFrame:CGRectMake(118, 0, 43.5, _screenBounds.size.height)];
+    [self.view addSubview:_shadow];
     
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    _sbg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sidebarbg"]];
+    [_sbg setFrame:CGRectMake(0, 0, 161.5, _screenBounds.size.height)];
+    [self.tableView setBackgroundView:_sbg];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark - Table view data source
+#pragma mark - TableView Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [titlesArray count];
+    return [_titlesArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"sideBarCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (!cell){
-        
+    if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [titlesArray objectAtIndex:indexPath.row];
+    // Set Selection Color
+    if (_cellSelectedBackgroundView) {
+        [cell setSelectedBackgroundView:_cellSelectedBackgroundView];
+    }
     
+    cell.textLabel.text = [_titlesArray objectAtIndex:indexPath.row];
     cell.textLabel.textColor = [UIColor whiteColor];
+    
     UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sidebarcell"]];
-    [bg setFrame:CGRectMake(0, 0, 161.5, 42.5)];
-    // Configure the cell...
+    [bg setFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 42.5)];
     cell.backgroundView = bg;
     
     return cell;
 }
 
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
+#pragma mark - TableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([delegate respondsToSelector:@selector(didSelectElementAtIndex:)]){
-        
-        [delegate didSelectElementAtIndex:indexPath.row];
+    if ([_delegate respondsToSelector:@selector(didSelectElementAtIndex:)]) {
+        [_delegate didSelectElementAtIndex:indexPath.row];
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
+}
+
+#pragma mark - Set Cell Selection Color
+
+- (void)setCellSelectionColor:(UIColor *)color
+{
+    // Set Background Color For Selected Cells
+    _cellSelectedBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];
+    _cellSelectedBackgroundView.backgroundColor = color;
+}
+
+#pragma mark - Set TableView Width
+
+- (void)setTableViewWidth:(NSInteger)width
+{
+    // Reset All UI Objects For New Width
+    self.view.frame = CGRectMake(0, 0, width - 0.5f, _screenBounds.size.height);
+    self.tableView.frame = CGRectMake(0, 0, width, _screenBounds.size.height);
+    [_sbg setFrame:CGRectMake(0, 0, width - 0.5f, _screenBounds.size.height)];
+    [_shadow setFrame:CGRectMake(width - 43.5f, 0, 43.5, _screenBounds.size.height)];
 }
 
 @end
