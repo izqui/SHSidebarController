@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
 
   s.author       = { "Jorge Izquierdo" => "izqui97@gmail.com" }
-  s.source       = { :git => "https://github.com/JAManfredi/SHSidebarController.git", :tag => "1.0" }
+  s.source       = { :git => "https://github.com/izqui/SHSidebarController.git", :tag => "1.0" }
   s.platform     = :ios, '5.0'
 
   s.source_files = 'SHSidebarController', 'SHSidebarController/*.{h,m}'
