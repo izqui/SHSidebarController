@@ -20,23 +20,27 @@
         
         delegate = del;
         titlesArray = array;
-        self.view.frame = CGRectMake(0, 0, 161.5, 480);
     }
     return self;
 }
 - (void)viewDidLoad
 {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 162, 480) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 162, self.view.frame.size.height) style:UITableViewStylePlain];
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
     UIImageView *shadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sidebarshadow"]];
-    [shadow setFrame:CGRectMake(118, 0, 43.5, 480)];
+    [shadow setFrame:CGRectMake(118, 0, 43.5, self.view.frame.size.height)];
+    shadow.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+
     [self.view addSubview:shadow];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     UIImageView *sbg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sidebarbg"]];
-    [sbg setFrame:CGRectMake(0, 0, 161.5, 480)];
+    [sbg setFrame:CGRectMake(0, 0, 161.5, self.view.frame.size.height)];
+    sbg.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+
     [self.tableView setBackgroundView:sbg];
     self.view.backgroundColor = [UIColor clearColor];
     [super viewDidLoad];
