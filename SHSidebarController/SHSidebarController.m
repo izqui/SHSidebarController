@@ -117,8 +117,9 @@
     
     [self.mainVC.view removeFromSuperview];
     self.mainVC = main;
+    self.mainVC.view.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleBottomMargin;
     
-    self.mainVC.view.frame = CGRectMake(0, 0, 320, self.menuVC.view.frame.size.height);
+    self.mainVC.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.menuVC.view.frame.size.height);
     UINavigationController *n = (UINavigationController *)self.mainVC;
     UIViewController *v = [n.viewControllers objectAtIndex:0];
     
